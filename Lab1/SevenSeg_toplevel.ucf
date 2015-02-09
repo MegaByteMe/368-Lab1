@@ -30,10 +30,10 @@ NET "SW<6>" LOC = N17;
 NET "SW<7>" LOC = R17;
 
 #Button Assignment
-#NET "BTN<0>" LOC = B18;
-#NET "BTN<1>" LOC = D18;
-#NET "BTN<2>" LOC = E18;
-#NET "BTN<3>" LOC = H13;
+NET "BTN0" LOC = B18;
+NET "BTN1" LOC = D18;
+NET "BTN2" LOC = E18;
+NET "BTN3" LOC = H13;
 
 #7 Segment Display
 Net "SEG<0>" LOC = L18;
@@ -50,7 +50,7 @@ Net "AN<2>"  LOC = C18;
 Net "AN<3>"  LOC = F15;
 
 #LED Assignment
-#NET "LED<0>" LOC = J14;
+NET "LED" LOC = J14;
 #NET "LED<1>" LOC = J15;
 #NET "LED<2>" LOC = K15;
 #NET "LED<3>" LOC = K14;
