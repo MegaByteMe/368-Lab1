@@ -1,8 +1,4 @@
 ---------------------------------------------------
--- Original Lab Source Provided by Below
--- Source Modified for Lab by Group 7
----------------------------------------------------
----------------------------------------------------
 -- School:     University of Massachusetts Dartmouth
 -- Department: Computer and Electrical Engineering
 -- Engineer:   Daniel Noyes
