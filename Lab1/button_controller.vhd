@@ -20,7 +20,9 @@ entity buttoncontrol is
     Port ( CLK     : in  STD_LOGIC;
            SW      : in  STD_LOGIC;
            BTN  : in  STD_LOGIC_VECTOR (3 downto 0);
-           LED : out STD_LOGIC_VECTOR (3 downto 0));
+ --          LED : out STD_LOGIC_VECTOR (3 downto 0);
+			  PUSH : out STD_LOGIC_VECTOR (3 downto 0)
+			  );
 end buttoncontrol;
 
 architecture Structural of buttoncontrol is
@@ -32,25 +34,29 @@ begin
     port map( CLK    => CLK,
               EN    => SW,
               INPUT  => BTN(0),
-              OUTPUT => LED(0));
+              OUTPUT => PUSH(0)
+				  );
 
     BTN_1: entity work.debounce
     port map( CLK    => CLK,
               EN    => SW,
               INPUT  => BTN(1),
-              OUTPUT => LED(1));
+				OUTPUT => PUSH(1)
+				  );
 
     BTN_2: entity work.debounce
     port map( CLK    => CLK,
               EN    => SW,
               INPUT  => BTN(2),
-              OUTPUT => LED(2));
+				  OUTPUT => PUSH(2)
+				  );
 
     BTN_3: entity work.debounce
     port map( CLK    => CLK,
               EN    => SW,
               INPUT  => BTN(3),
-              OUTPUT => LED(3));
+				  OUTPUT => PUSH(3)
+				  );
 
     
     ----- End Structural Components -----

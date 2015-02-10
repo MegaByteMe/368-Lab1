@@ -1,3 +1,7 @@
+#---------------------------------------------------
+#-- Original Lab Source Provided by Below
+#-- Source Modified for Lab by Group 7
+#---------------------------------------------------
 ###################################################
 ## School:     University of Massachusetts Dartmouth
 ## Department: Computer and Electrical Engineering
@@ -15,7 +19,7 @@
 #Clock Assignment
 NET "CLK" LOC = B8; #Primary Clock
 
-##Switch Assignment
+#Switch Assignment
 NET "SW<0>" LOC = G18;
 NET "SW<1>" LOC = H18;
 NET "SW<2>" LOC = K18;
@@ -25,10 +29,13 @@ NET "SW<5>" LOC = L13;
 NET "SW<6>" LOC = N17;
 NET "SW<7>" LOC = R17;
 
-##Button Assignment
-NET "BTN" LOC = B18;
+#Button Assignment
+NET "BTN<0>" LOC = B18;
+NET "BTN<1>" LOC = D18;
+NET "BTN<2>" LOC = E18;
+NET "BTN<3>" LOC = H13;
 
-##7 Segment Display
+#7 Segment Display
 Net "SEG<0>" LOC = L18;
 Net "SEG<1>" LOC = F18;
 Net "SEG<2>" LOC = D17;
@@ -41,3 +48,13 @@ Net "AN<0>"  LOC = F17;
 Net "AN<1>"  LOC = H17;
 Net "AN<2>"  LOC = C18;
 Net "AN<3>"  LOC = F15;
+
+#LED Assignment
+NET "LED<0>" LOC = J14;
+NET "LED<1>" LOC = J15;
+NET "LED<2>" LOC = K15;
+NET "LED<3>" LOC = K14;
+#NET "LED<4>" LOC = E16;
+#NET "LED<5>" LOC = P16;
+#NET "LED<6>" LOC = E4;
+#NET "LED<7>" LOC = P4;
