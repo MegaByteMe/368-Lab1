@@ -32,7 +32,6 @@ entity SSegDriver is
         SEG_2   : in STD_LOGIC_VECTOR (3 downto 0);
         SEG_3   : in STD_LOGIC_VECTOR (3 downto 0);
         DP_CTRL : in STD_LOGIC_VECTOR (3 downto 0);
-        COL_EN  : in STD_LOGIC;
         SEG_OUT : out STD_LOGIC_VECTOR (6 downto 0);
         DP_OUT  : out STD_LOGIC;
         AN_OUT  : out STD_LOGIC_VECTOR (3 downto 0)
@@ -76,7 +75,7 @@ with hexnum select
         "0001110" when "1111", -- F
         "1111111" when others; -- Invalid number
 
-    clk_div_240hz: process (RST, CLK, EN) begin
+    clk_div_240hz: process (RST, CLK, EN, clk240hz) begin
         if (RST = '1') then
             clk240hz <= '0';
             count240hz <= 0;
@@ -94,7 +93,7 @@ with hexnum select
         end if;
     end process;
 
-    disp_driver: process (RST, CLK) begin
+    disp_driver: process (RST, CLK, clk240hz) begin
         if (RST = '1') then
             pos <= "00";
             hexnum <= (others => '0');

@@ -30,30 +30,30 @@ end btn_drv;
 architecture Behavioral of btn_drv is
 
 begin
-process (CLK)
+process (CLK, PUSH)
 begin
 			
 	if (CLK='1' and PUSH(0)='1') then	
-    OP <= "1111";
+    OP <= "0000";
 	 OUT3 <= "0001";
-	 LED <= "0001";
+	 LED <= "1111";
 	 end if;
 	 
 	if (CLK='1' and PUSH(1)='1') then	
-    OP <= "0000";
+    OP <= "0001";
 	 OUT3 <= "0010";
-	 LED <= "0010";
+	 LED <= "0000";
 	 end if;
 	 
 	 if (CLK='1' and PUSH(2)='1') then
-	 OP <= "0001";
+	 OP <= "0010";
 	 OUT3 <= "0100";
-	 LED <= "0100";
+	 LED <= "0001";
 	 end if;
 	 
 	 if (CLK='1' and PUSH(3)='1') then
 	 OUT3 <= "1000";
-	 LED <= "1000";
+	 LED <= "1111";
 	 end if;	 
 	 
 end process;

@@ -20,7 +20,6 @@ entity buttoncontrol is
     Port ( CLK     : in  STD_LOGIC;
            SW      : in  STD_LOGIC;
            BTN  : in  STD_LOGIC_VECTOR (3 downto 0);
- --          LED : out STD_LOGIC_VECTOR (3 downto 0);
 			  PUSH : out STD_LOGIC_VECTOR (3 downto 0)
 			  );
 end buttoncontrol;
